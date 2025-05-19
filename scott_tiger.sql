@@ -64,3 +64,10 @@ insert into emp_test1 values (1,100);
 insert into emp_test1 values (2,200);
 insert into emp_test1 values (3,300);
 commit;
+--===============
+create table weather (id number, recorddate date, temperature number);
+insert into weather values (1, to_date ('2015-01-01', 'yyyy=mm-dd') , 10);
+insert into weather values (2, date'2015-01-02' , 25);
+insert into weather values (3, date'2015-01-03' , 20);
+insert into weather values (4, date'2015-01-04' , 30);
+
