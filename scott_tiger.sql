@@ -56,3 +56,11 @@ insert into salgrade
   select 4, 2001, 3000 from dummy union all
   select 5, 3001, 9999 from dummy;
 commit;
+
+
+--===========
+create table emp_test1 (id number, salary number);
+insert into emp_test1 values (1,100);
+insert into emp_test1 values (2,200);
+insert into emp_test1 values (3,300);
+commit;
