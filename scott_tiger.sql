@@ -71,3 +71,22 @@ insert into weather values (2, date'2015-01-02' , 25);
 insert into weather values (3, date'2015-01-03' , 20);
 insert into weather values (4, date'2015-01-04' , 30);
 
+--============================== SALES
+create table sales 
+(year number, country varchar2(200), product varchar2(200), profit number);
+
+insert into sales values ( 2000 , 'Finland' , 'Computer'   ,   1500 );
+insert into sales values ( 2000 , 'Finland' , 'Phone'      ,    100 );
+insert into sales values ( 2001 , 'Finland' , 'Phone'      ,     10 );
+insert into sales values ( 2000 , 'India'   , 'Calculator' ,     75 );
+insert into sales values ( 2000 , 'India'   , 'Calculator' ,     75 );
+insert into sales values ( 2000 , 'India'   , 'Computer'   ,   1200 );
+insert into sales values ( 2000 , 'USA'     , 'Calculator' ,     75 );
+insert into sales values ( 2000 , 'USA'     , 'Computer'   ,   1500 );
+insert into sales values ( 2001 , 'USA'     , 'Calculator' ,     50 );
+insert into sales values ( 2001 , 'USA'     , 'Computer'   ,   1500 );
+insert into sales values ( 2001 , 'USA'     , 'Computer'   ,   1200 );
+insert into sales values ( 2001 , 'USA'     , 'TV'         ,    150 );
+insert into sales values ( 2001 , 'USA'     , 'TV'         ,    100 );
+
+commit;
