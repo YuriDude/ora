@@ -90,3 +90,21 @@ insert into sales values ( 2001 , 'USA'     , 'TV'         ,    150 );
 insert into sales values ( 2001 , 'USA'     , 'TV'         ,    100 );
 
 commit;
+--======================================================
+-- hierarchy 
+
+select * from emp;
+
+with emp_recur (empno, name , mgrid, level_) as (
+select  empno, ename, mgr, 0 as level_
+from emp
+where mgr is null 
+union all
+select  e.empno, e.ename,  e.mgr,  r.level_ + 1 as level_
+from emp e
+join  emp_recur r
+    on e.mgr=r.empno
+)
+select * 
+from emp_recur;
+
