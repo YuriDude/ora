@@ -108,3 +108,7 @@ join  emp_recur r
 select * 
 from emp_recur;
 
+select lpad(' ',level*2,' ')||ename ename, empno, mgr
+from emp
+START WITH MGR IS NULL
+CONNECT BY PRIOR EMPNO = MGR;
